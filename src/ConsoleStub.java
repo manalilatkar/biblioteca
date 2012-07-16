@@ -26,7 +26,7 @@ public class ConsoleStub implements Console {
     }  
                                    
     public int getNumberFromConsole(){
-        return ((int)Integer.parseInt((String)lines.get(lines.size()-1)));
+        return (Integer.parseInt(lines.get(lines.size()-1)));
     }                                  //console to object
 
     @Override
@@ -34,4 +34,7 @@ public class ConsoleStub implements Console {
         lines.add(String.valueOf(i));
     }
 
+    public void giveStringToConsole(String s) {
+        lines.add(s);
+    }
 }

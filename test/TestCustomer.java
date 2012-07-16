@@ -22,11 +22,19 @@ public class TestCustomer {
     public void testsDisplayCustomerDetails(){
         int booksIssued[]={1,2,0};
         Customer customer1=new Customer(1,"Manali",2,booksIssued);
-      //  Book bookInstance1=new Book("The Da Vinci Code",1,"Dan Brown");
-      //  Book bookInstance2=new Book("The digital Fortress",2,"Dan Brown");
         String output="1.Manali  2 books reserved";
         Assert.assertEquals(output,customer1.displayDetails());
 
 
     }
+
+    @Test
+    public  void testsSameName(){
+        int booksIssued[]={1,2,0};
+        Customer customer1=new Customer(1,"Manali",2,booksIssued);
+        Assert.assertTrue(customer1.sameName("Manali"));
+
+    }
+
+
 }

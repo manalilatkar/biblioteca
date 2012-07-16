@@ -32,4 +32,21 @@ public class Customer {
         String details=customerID+"."+name+"  "+noOfBooksIssued+" books reserved";
         return details;
     }
+
+    public boolean sameName(String otherName) {
+        if (name.equals(otherName))
+            return true;
+        return false;
+    }
+    public void addBook(int bookID){
+        this.bookCollection[noOfBooksIssued]=bookID;
+        this.noOfBooksIssued++;
+
+    }
 }
+
+
+
+
+
+//AddToCollection

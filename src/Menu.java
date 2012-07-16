@@ -12,6 +12,7 @@ import java.lang.String.*;
 public class Menu {
     ArrayList<String> menu=new ArrayList<String>();
     Menu(){
+        menu.add("Enter a number based on your choice of operation");
         menu.add("1.View list of books");
         menu.add("2.Reserve a book");
         menu.add("3.Check your library number");
@@ -23,6 +24,7 @@ public class Menu {
         console.println(menu.get(1));
         console.println(menu.get(2));
         console.println(menu.get(3));
+        console.println(menu.get(4));
 
     }
 }

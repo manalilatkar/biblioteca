@@ -16,10 +16,10 @@ public class TestMenu {
         Menu menu=new Menu();
         ConsoleStub console= new ConsoleStub();
         menu.printTo(console);
-        Assert.assertTrue((console.getLine(1)).equals("1.View list of books"));
-        Assert.assertTrue((console.getLine(2)).equals("2.Reserve a book"));
-        Assert.assertTrue((console.getLine(3)).equals("3.Check your library number"));
-        Assert.assertTrue((console.getLine(4)).equals("4.Exit"));
+        Assert.assertTrue((console.getLine(2)).equals("1.View list of books"));
+        Assert.assertTrue((console.getLine(3)).equals("2.Reserve a book"));
+        Assert.assertTrue((console.getLine(4)).equals("3.Check your library number"));
+        Assert.assertTrue((console.getLine(5)).equals("4.Exit"));
 
 
     }
@@ -28,9 +28,3 @@ public class TestMenu {
 
     }
 }
- /* FooBar foobar = new FooBar(1, 100);
-        ConsoleStub console = new ConsoleStub();
-
-        foobar.printTo(console);
-
-        assertThat(console.getLine(3)).isEqualTo("Foo");*/

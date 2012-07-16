@@ -27,6 +27,6 @@ public class Book {
 
 
     public String displayBook() {
-        return (bookID+" . "+Name+"   "+author);
+        return (bookID+" .  "+Name+" by "+author);
     }
 }

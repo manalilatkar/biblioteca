@@ -27,6 +27,6 @@ public class BookTest {
     @Test
     public void testForBookDisplayMethod(){
         Book bookInstance1=new Book("The Da Vinci Code",1,"Dan Brown");
-        Assert.assertEquals(bookInstance1.displayBook(),"1 . The Da Vinci Code   Dan Brown");
+        Assert.assertEquals(bookInstance1.displayBook(),"1 .  The Da Vinci Code by Dan Brown");
     }
 }
