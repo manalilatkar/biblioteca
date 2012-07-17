@@ -1,15 +1,8 @@
+package com.twu28.biblioteca;
+
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-
-/**
- * Created by IntelliJ IDEA.
- * User: manalil
- * Date: 7/12/12
- * Time: 8:28 PM
- * To change this template use File | Settings | File Templates.
- */
 public class TestMenu {
     @Test
     public void testsMenuDisplay(){
@@ -21,10 +14,6 @@ public class TestMenu {
         Assert.assertTrue((console.getLine(4)).equals("3.Check your library number"));
         Assert.assertTrue((console.getLine(5)).equals("4.Exit"));
 
-
-    }
-    @Test
-    public void testsSelectOptionOne(){
 
     }
 }

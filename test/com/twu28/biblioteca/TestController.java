@@ -1,3 +1,5 @@
+package com.twu28.biblioteca;
+
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -28,7 +30,13 @@ public class TestController {
         Controller controller=new Controller(2);
         ConsoleStub consoleStub=new ConsoleStub();
         BookRepo bookRepo=new BookRepo();
+
+        consoleStub.giveNoToConsole(2);
         controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("Thank You. Enjoy the book", consoleStub.getLine(2));
+        consoleStub.giveNoToConsole(2);
+        controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("Sorry we don't have that book yet.", consoleStub.getLine(4));
 
     }
 
@@ -38,6 +46,7 @@ public class TestController {
         ConsoleStub consoleStub=new ConsoleStub();
         BookRepo bookRepo=new BookRepo();
         controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("Please talk to Librarian. Thank you.",consoleStub.getLine(1));
 
 
     }
