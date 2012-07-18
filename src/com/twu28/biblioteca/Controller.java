@@ -9,7 +9,7 @@ public class Controller {
 
     public BookRepo actionBasedOnOption(BookRepo bookRepo,Console console){
 
-
+        MovieRack movieRack=new MovieRack();
         switch (choice)
         {   case 1: bookRepo.displayList(console);
             break;
@@ -17,6 +17,7 @@ public class Controller {
                 break;
             case 3: bookRepo.checkLibraryNumber(console);
                 break;
+            case 4: movieRack.displayList(console);
 
 
 

@@ -20,7 +20,7 @@ public class TestController {
         Controller controller=new Controller(1);
         ConsoleStub consoleStub=new ConsoleStub();
         BookRepo bookRepo=new BookRepo();
-        controller.actionBasedOnOption( bookRepo,consoleStub);
+        controller.actionBasedOnOption(bookRepo,consoleStub);
         Assert.assertEquals(consoleStub.getLine(1),"The library has following books :");
 
     }
@@ -30,7 +30,6 @@ public class TestController {
         Controller controller=new Controller(2);
         ConsoleStub consoleStub=new ConsoleStub();
         BookRepo bookRepo=new BookRepo();
-
         consoleStub.giveNoToConsole(2);
         controller.actionBasedOnOption(bookRepo,consoleStub);
         Assert.assertEquals("Thank You. Enjoy the book", consoleStub.getLine(2));
@@ -44,10 +43,21 @@ public class TestController {
     public void testsThirdOptionofController(){
         Controller controller=new Controller(3);
         ConsoleStub consoleStub=new ConsoleStub();
+        MovieRack movieRack=new MovieRack();
         BookRepo bookRepo=new BookRepo();
         controller.actionBasedOnOption(bookRepo,consoleStub);
         Assert.assertEquals("Please talk to Librarian. Thank you.",consoleStub.getLine(1));
 
+
+    }
+
+    @Test
+    public void testsFourthOptionOfController(){
+        Controller controller=new Controller(4);
+        ConsoleStub consoleStub=new ConsoleStub();
+        BookRepo bookRepo=new BookRepo();
+        controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("Movie name Director Rating",consoleStub.getLine(1));
 
     }
 
