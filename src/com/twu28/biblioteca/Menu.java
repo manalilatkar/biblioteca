@@ -12,7 +12,8 @@ public class Menu {
         menu.add("2.Reserve a book");
         menu.add("3.Check your library number");
         menu.add("4.View movie name, director, rating");
-        menu.add("5.Exit");
+        menu.add("5.Log In");
+        menu.add("6.Exit");
     }
 
     public void printTo(Console console) {
@@ -22,6 +23,7 @@ public class Menu {
         console.println(menu.get(3));
         console.println(menu.get(4));
         console.println(menu.get(5));
+        console.println(menu.get(6));
 
     }
 }
