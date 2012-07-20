@@ -10,19 +10,19 @@ public class ConsoleStub implements Console {
         return lines.get(lineNumberOneBased - 1);        //console to the test
     }
 
-    public void giveNoToConsole(int userInput){                              //test to console
+    public void giveNoToConsole(int userInput){          //test to console
 
         lines.add(""+userInput);
     }
 
     @Override
-    public void println(String s) {   //object to console
+    public void println(String s) {                      //object to console
         lines.add(s);
     }
 
     public int getNumberFromConsole(){
         return (Integer.parseInt(lines.get(lines.size()-1)));
-    }                                  //console to object
+    }                                                   //console to object
 
     @Override
     public void println(int i) {

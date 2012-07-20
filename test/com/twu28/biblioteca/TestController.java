@@ -4,15 +4,6 @@ import junit.framework.Assert;
 import org.junit.Test;
 
 
-import javax.sound.midi.ControllerEventListener;
-
-/**
- * Created by IntelliJ IDEA.
- * User: manalil
- * Date: 7/14/12
- * Time: 4:19 AM
- * To change this template use File | Settings | File Templates.
- */
 public class TestController {
     
     @Test
@@ -40,13 +31,24 @@ public class TestController {
     }
 
     @Test
-    public void testsThirdOptionofController(){
+    public void testsThirdOptionOfControllerWhenNotLoggedIn(){
         Controller controller=new Controller(3);
         ConsoleStub consoleStub=new ConsoleStub();
-        MovieRack movieRack=new MovieRack();
         BookRepo bookRepo=new BookRepo();
         controller.actionBasedOnOption(bookRepo,consoleStub);
         Assert.assertEquals("Please talk to Librarian. Thank you.",consoleStub.getLine(1));
+
+
+    }
+    @Test
+    public void testsThirdOptionOfControllerWhenLoggedIn(){
+        Controller controller=new Controller(3);
+        ConsoleStub consoleStub=new ConsoleStub();
+        BookRepo bookRepo=new BookRepo();
+        Driver.isUserLoggedIn =true;
+        Driver.userLoggedIn="111-1112";
+        controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("Your library number is 111-1112",consoleStub.getLine(1));
 
 
     }
@@ -58,6 +60,19 @@ public class TestController {
         BookRepo bookRepo=new BookRepo();
         controller.actionBasedOnOption(bookRepo,consoleStub);
         Assert.assertEquals("Movie name Director Rating",consoleStub.getLine(1));
+
+    }
+    @Test
+    public void testsLoginAndLogoutOption(){
+        Controller controller=new Controller(5);
+        ConsoleStub consoleStub=new ConsoleStub();
+        consoleStub.giveStringToConsole("111-1112");
+        consoleStub.giveStringToConsole("pwd2");
+        BookRepo bookRepo=new BookRepo();
+        controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertEquals("111-1112",Driver.userLoggedIn);
+        controller.actionBasedOnOption(bookRepo,consoleStub);
+        Assert.assertFalse(Driver.isUserLoggedIn);
 
     }
 

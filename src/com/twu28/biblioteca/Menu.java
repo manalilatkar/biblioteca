@@ -6,7 +6,8 @@ import java.lang.String.*;
 
 public class Menu {
     ArrayList<String> menu=new ArrayList<String>();
-    Menu(){
+    Menu(boolean loggedIn){
+        if(loggedIn==false){
         menu.add("Enter a number based on your choice of operation");
         menu.add("1.View list of books");
         menu.add("2.Reserve a book");
@@ -14,6 +15,16 @@ public class Menu {
         menu.add("4.View movie name, director, rating");
         menu.add("5.Log In");
         menu.add("6.Exit");
+        }
+        else{
+        menu.add("Enter a number based on your choice of operation");
+        menu.add("1.View list of books");
+        menu.add("2.Reserve a book");
+        menu.add("3.Check your library number");
+        menu.add("4.View movie name, director, rating");
+        menu.add("5.Log Out");
+        menu.add("6.Exit");
+        }
     }
 
     public void printTo(Console console) {

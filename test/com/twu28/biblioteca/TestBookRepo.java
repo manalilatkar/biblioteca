@@ -3,16 +3,8 @@ package com.twu28.biblioteca;
 import junit.framework.Assert;
 import org.junit.Test;
 
-import java.util.jar.Pack200;
 
-/**
- * Created by IntelliJ IDEA.
- * User: manalil
- * Date: 7/13/12
- * Time: 1:47 AM
- * To change this template use File | Settings | File Templates.
- */
-public class BookRepoTest {
+public class TestBookRepo {
     @Test
     public void testsBookRepoDisplay(){
         BookRepo bookRepo=new BookRepo();
@@ -31,14 +23,14 @@ public class BookRepoTest {
     @Test
     public void testsBookIssued(){
         BookRepo bookRepo=new BookRepo();
-        Assert.assertFalse(bookRepo.BookIssued(2));
+        Assert.assertFalse(bookRepo.bookIssued(2));
     }
 
     @Test
     public void testsIssueBook(){
         BookRepo bookRepo=new BookRepo();
         bookRepo.issueBook(1);
-        Assert.assertTrue(bookRepo.BookIssued(1));
+        Assert.assertTrue(bookRepo.bookIssued(1));
     }
 
     @Test

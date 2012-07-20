@@ -6,7 +6,7 @@ import org.junit.Test;
 public class TestMenu {
     @Test
     public void testsMenuDisplay(){
-        Menu menu=new Menu();
+        Menu menu=new Menu(false);
         ConsoleStub console= new ConsoleStub();
         menu.printTo(console);
         Assert.assertTrue((console.getLine(2)).equals("1.View list of books"));

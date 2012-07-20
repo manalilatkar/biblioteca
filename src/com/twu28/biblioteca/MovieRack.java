@@ -2,13 +2,7 @@ package com.twu28.biblioteca;
 
 import java.util.ArrayList;
 
-/**
- * Created by IntelliJ IDEA.
- * User: manalil
- * Date: 7/17/12
- * Time: 11:02 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class MovieRack {
     public ArrayList<Movie> movieList=new ArrayList<Movie>(15);
 

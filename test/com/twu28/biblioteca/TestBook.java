@@ -3,14 +3,7 @@ package com.twu28.biblioteca;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Created by IntelliJ IDEA.
- * User: manalil
- * Date: 7/12/12
- * Time: 12:56 PM
- * To change this template use File | Settings | File Templates.
- */
-public class BookTest {
+public class TestBook {
 
 
     @Test

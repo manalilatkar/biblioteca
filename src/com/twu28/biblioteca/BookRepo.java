@@ -30,7 +30,7 @@ public class BookRepo {
     }
 
 
-    public boolean BookIssued(int i) {
+    public boolean bookIssued(int i) {
 
         if(originalBookList.size()<i)return false;
         if (booksIssued[i]==0)
@@ -46,7 +46,7 @@ public class BookRepo {
     public void reserveBook(Console console) {
         System.out.println("Enter the book ID no.");
         int bookID=console.getNumberFromConsole();
-        if(!(BookIssued(bookID))) {
+        if(!(bookIssued(bookID))) {
             issueBook(bookID);
             console.println("Thank You. Enjoy the book");}
         else console.println("Sorry we don't have that book yet.");

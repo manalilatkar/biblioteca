@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
 public class GetInput {
     String userInput= null;
     public String go(){
-        //This method takes input from the user and sends it to the main thread.
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
