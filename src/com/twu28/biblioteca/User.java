@@ -21,13 +21,11 @@ public class User {
         this.loggedIn=true;
     }
     public boolean equalForLogin(User user){
-        if((this.libraryNo.equals((user).libraryNo))&&(this.password.equals((user).password)))
-            return true;
-        return false;
+        return (this.libraryNo.equals((user).libraryNo)) && (this.password.equals((user).password));
 
     }
 
     public boolean equalByLibraryNo(String libraryNo) {
-        return (this.libraryNo==libraryNo);  //To change body of created methods use File | Settings | File Templates.
+        return (this.libraryNo.equals(libraryNo));
     }
 }

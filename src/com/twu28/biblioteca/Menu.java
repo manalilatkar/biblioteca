@@ -7,23 +7,23 @@ import java.lang.String.*;
 public class Menu {
     ArrayList<String> menu=new ArrayList<String>();
     Menu(boolean loggedIn){
-        if(loggedIn==false){
-        menu.add("Enter a number based on your choice of operation");
-        menu.add("1.View list of books");
-        menu.add("2.Reserve a book");
-        menu.add("3.Check your library number");
-        menu.add("4.View movie name, director, rating");
-        menu.add("5.Log In");
-        menu.add("6.Exit");
+        if(!loggedIn){
+        menu.add("\nEnter a number based on your choice of operation");
+        menu.add("1. View list of books");
+        menu.add("2. Reserve a book");
+        menu.add("3. Check your library number");
+        menu.add("4. View movie name, director and rating");
+        menu.add("5. Login");
+        menu.add("6. Exit");
         }
         else{
-        menu.add("Enter a number based on your choice of operation");
-        menu.add("1.View list of books");
-        menu.add("2.Reserve a book");
-        menu.add("3.Check your library number");
-        menu.add("4.View movie name, director, rating");
-        menu.add("5.Log Out");
-        menu.add("6.Exit");
+        menu.add("\nEnter a number based on your choice of operation");
+        menu.add("1. View list of books");
+        menu.add("2. Reserve a book");
+        menu.add("3. Check your library number");
+        menu.add("4. View movie name, director and rating");
+        menu.add("5. Logout");
+        menu.add("6. Exit");
         }
     }
 

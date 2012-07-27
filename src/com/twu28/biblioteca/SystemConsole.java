@@ -7,11 +7,6 @@ public class SystemConsole implements Console{
     }
 
     @Override
-    public void println(int i) {
-        System.out.println(i);
-    }
-
-    @Override
     public int getNumberFromConsole(){
         String input;
         int number;
@@ -20,7 +15,7 @@ public class SystemConsole implements Console{
         try{
             number=Integer.parseInt(input);  }
         catch (NumberFormatException string){
-            System.out.println("Please enter a valid menu option(a number)");
+            System.out.println("Select a valid option!!");
             return 0;
         }
 
@@ -36,9 +31,6 @@ public class SystemConsole implements Console{
     }
 
 
-    public void clearConsole(){
-
-    }
     public int getNumberFromConsole(int number)  {
         return (this.getNumberFromConsole());
     }

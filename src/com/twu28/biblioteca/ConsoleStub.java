@@ -24,17 +24,10 @@ public class ConsoleStub implements Console {
         return (Integer.parseInt(lines.get(lines.size()-1)));
     }                                                   //console to object
 
-    @Override
-    public void println(int i) {
-        lines.add(String.valueOf(i));
-    }
-
     public void giveStringToConsole(String s) {
         lines.add(s);
     }
-    public void clearConsole(){
-        lines.clear();
-    }
+
     public int getNumberFromConsole(int number){
         return (Integer.parseInt(lines.get(number-1)));
     }

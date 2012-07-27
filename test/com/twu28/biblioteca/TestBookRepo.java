@@ -39,7 +39,7 @@ public class TestBookRepo {
         BookRepo bookRepo=new BookRepo();
         console.giveNoToConsole(2);
         bookRepo.reserveBook(console);
-        Assert.assertEquals("Thank You. Enjoy the book",console.getLine(2));
+        Assert.assertEquals("Thank You! Enjoy the book",console.getLine(2));
         console.giveNoToConsole(2);
         bookRepo.reserveBook(console);
         Assert.assertEquals("Sorry we don't have that book yet.",console.getLine(4));

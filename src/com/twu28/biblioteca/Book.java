@@ -10,8 +10,6 @@ public class Book {
         this.Name=name;
         this.bookID=bookID;
         this.author=Author;
-
-
     }
 
     @Override
